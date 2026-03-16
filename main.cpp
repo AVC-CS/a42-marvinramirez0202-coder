@@ -32,13 +32,34 @@ int main()
     cin >> weight >> distance;
 
     // TODO: validate input - weight must be > 0 and <= 20
+    if (weight > 0 && weight <= 20){
+        if(distance >= 10 && distance <= 3000){
+            if (weight <= .2){
+                dRate = RATE2;
+            }
+            else if (weight <= 6){
+                dRate = RATE6;
+            }
+            else if (weight <= 10){
+                dRate = RATE10;
+            }
+            else{
+                dRate = RATE20;
+            }
+        }
+    }
 
     // TODO: validate input - distance must be >= 10 and <= 3000
 
     // TODO: determine rate based on weight
 
     // TODO: calculate price based on distance
-
+    if (distance > 500){
+        price = (distance / 500.0) * dRate;
+    }
+    else{
+        price = dRate;
+    }
     // Use the following statements to print output
     cout << setprecision(2) << fixed;
     cout << "The shipping price for package is " << price << endl;
