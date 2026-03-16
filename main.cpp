@@ -62,7 +62,7 @@ int main()
     }
     // Use the following statements to print output
     cout << setprecision(2) << fixed;
-    cout << "The shipping price for package is " << price << endl;
+    cout << price << endl;
 
     return 0;
 }
