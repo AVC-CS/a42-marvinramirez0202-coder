@@ -28,7 +28,6 @@ int main()
     const double RATE20 = 4.80;
     double weight, distance, dRate, price;
 
-    cout << "Enter the package weight and distance\n";
     cin >> weight >> distance;
 
     // TODO: validate input - weight must be > 0 and <= 20
